@@ -1,0 +1,25 @@
+{
+    "name": "ksfraser/ksf-f-campaign-builder",
+    "description": "Visual drag-drop campaign builder for marketing automation",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["campaign", "marketing", "automation", "workflow", "crm"],
+    "homepage": "https://github.com/ksfraser/ksf_FA_CampaignBuilder",
+    "autoload": {
+        "psr-4": {
+            "Ksfraser\\CampaignBuilder\\": "src/Ksfraser/CampaignBuilder/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ksfraser\\CampaignBuilder\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": "^8.1",
+        "psr/log": "^1.0|^2.0|^3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0"
+    }
+}
