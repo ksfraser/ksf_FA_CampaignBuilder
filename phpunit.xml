@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<phpunit xmlns="https://phpunit.de/xml/8.1"
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
          bootstrap="tests/bootstrap.php"
          colors="true"
          verbose="true">
@@ -13,12 +14,6 @@
             <directory suffix=".php">src</directory>
         </include>
     </source>
-    <coverage>
-        <report>
-            <html outputDirectory="build/coverage"/>
-            <text outputFile="build/coverage.txt"/>
-        </report>
-    </coverage>
     <php>
         <ini name="error_reporting" value="E_ALL"/>
     </php>
