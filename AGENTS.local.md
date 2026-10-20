@@ -8,7 +8,7 @@
 ```
 ksf_FA_CampaignBuilder/
 ├── sql/
-│   ├── fa_campaigns.sql
+│   ├── ksf_campaignbuilder_campaigns.sql
 │   ├── fa_campaign_leads.sql
 │   └── fa_campaign_metrics.sql
 ├── includes/
