@@ -1,6 +1,9 @@
 -- CampaignBuilder module database schema for FrontAccounting
 
-CREATE TABLE IF NOT EXISTS `fa_campaigns` (
+ALTER TABLE IF EXISTS `fa_campaigns` RENAME TO `0_ksf_campaignbuilder_campaigns`;
+ALTER TABLE IF EXISTS `fa_campaign_nodes` RENAME TO `0_ksf_campaignbuilder_campaign_nodes`;
+
+CREATE TABLE IF NOT EXISTS `0_ksf_campaignbuilder_campaigns` (
     `id` INT(11) NOT NULL AUTO_INCREMENT,
     `name` VARCHAR(255) NOT NULL,
     `description` TEXT,
@@ -11,7 +14,7 @@ CREATE TABLE IF NOT EXISTS `fa_campaigns` (
     PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-CREATE TABLE IF NOT EXISTS `fa_campaign_nodes` (
+CREATE TABLE IF NOT EXISTS `0_ksf_campaignbuilder_campaign_nodes` (
     `id` INT(11) NOT NULL AUTO_INCREMENT,
     `campaign_id` INT(11) NOT NULL,
     `node_type` VARCHAR(50) NOT NULL,
@@ -22,4 +25,4 @@ CREATE TABLE IF NOT EXISTS `fa_campaign_nodes` (
     KEY `campaign_id` (`campaign_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-INSERT INTO `fa_modules` (`name`, `version`, `enabled`, `installed`) VALUES ('CampaignBuilder', '1.0.0', 1, NOW()) ON DUPLICATE KEY UPDATE `version` = '1.0.0';
+INSERT INTO `0_ksf_modules` (`name`, `version`, `enabled`, `installed`) VALUES ('CampaignBuilder', '1.0.0', 1, NOW()) ON DUPLICATE KEY UPDATE `version` = '1.0.0';
